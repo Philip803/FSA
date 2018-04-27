@@ -10,6 +10,8 @@
 		242E045D2092A5880036DBE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 242E045C2092A5880036DBE6 /* GoogleService-Info.plist */; };
 		242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E045E2092B4920036DBE6 /* AddQuestionVC.swift */; };
 		242E04682092C7A60036DBE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E04672092C7A60036DBE6 /* Constants.swift */; };
+		242E046A2092DC000036DBE6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E04692092DC000036DBE6 /* Question.swift */; };
+		242E046C2092DD740036DBE6 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E046B2092DD740036DBE6 /* QuestionCell.swift */; };
 		29A0E08AB4747E74F1C38567 /* Pods_FSAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6760EF9FBC15ABDB2E4A385 /* Pods_FSAUITests.framework */; };
 		8500CA3FF55A9F1BC3B77F8C /* Pods_FSATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ED1844335646C166FF1246 /* Pods_FSATests.framework */; };
 		D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B6F20917C51003CC091 /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 		242E045C2092A5880036DBE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		242E045E2092B4920036DBE6 /* AddQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionVC.swift; sourceTree = "<group>"; };
 		242E04672092C7A60036DBE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		242E04692092DC000036DBE6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		242E046B2092DD740036DBE6 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		2FE3241C7EE7EB851DA5451C /* Pods-FSAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSAUITests/Pods-FSAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		379E2A7607E7AB44B7DBC851 /* Pods-FSATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSATests/Pods-FSATests.release.xcconfig"; sourceTree = "<group>"; };
 		7030DD1DAFEFE957110C0AB7 /* Pods-FSA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSA.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSA/Pods-FSA.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		242E04602092B49B0036DBE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				242E04692092DC000036DBE6 /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 		242E04622092B4A80036DBE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				242E046B2092DD740036DBE6 /* QuestionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -433,8 +439,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242E046A2092DC000036DBE6 /* Question.swift in Sources */,
 				D48A6B7220917C51003CC091 /* MainVC.swift in Sources */,
 				242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */,
+				242E046C2092DD740036DBE6 /* QuestionCell.swift in Sources */,
 				D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */,
 				242E04682092C7A60036DBE6 /* Constants.swift in Sources */,
 			);

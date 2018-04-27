@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddQuestionVC: UIViewController , UITextViewDelegate{
 
@@ -15,6 +16,9 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var questionTxt: UITextView!
     @IBOutlet weak var postBtn: UIButton!
+    
+    //Variables
+    private var selectedCategory = "funny"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +36,25 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
     }
     
     @IBAction func postBtnTapped(_ sender: Any) {
-        
+        Firestore.firestore().collection("questions").addDocument(data: [
+            "category" : selectedCategory,
+            "numComments" : 0,
+            "numLikes" : 0,
+            "questionTxt" : questionTxt.text,
+            "timestamp" : FieldValue.serverTimestamp(),
+            "username" : userNameTxt.text!
+        ]) { (err) in
+            if let err = err {
+                debugPrint("Error adding document: \(err)")
+            } else {
+                //if success then go back to previous page
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func categoryChanged(_ sender: Any) {
+        
     }
     
 }

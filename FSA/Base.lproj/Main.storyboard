@@ -52,12 +52,12 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6D1-QH-ZX7">
                                 <rect key="frame" x="16" y="72" width="343" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
+                                    <segment title="funny"/>
                                     <segment title="Second"/>
                                     <segment title="Third"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRm-ce-V0m">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRm-ce-V0m">
                                 <rect key="frame" x="42" y="120" width="291" height="30"/>
                                 <color key="textColor" white="0.81987847229999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -87,7 +87,7 @@
                                 <rect key="frame" x="16" y="72" width="343" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First" enabled="NO"/>
+                                    <segment title="funny" enabled="NO"/>
                                     <segment title="Second"/>
                                     <segment title="Third"/>
                                 </segments>

@@ -18,7 +18,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
     @IBOutlet weak var postBtn: UIButton!
     
     //Variables
-    private var selectedCategory = "funny"
+    private var selectedCategory = QuestionCategory.funny.rawValue
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +36,15 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
     }
     
     @IBAction func postBtnTapped(_ sender: Any) {
+        guard let username = userNameTxt.text else { return }
+        
         Firestore.firestore().collection("questions").addDocument(data: [
-            "category" : selectedCategory,
-            "numComments" : 0,
-            "numLikes" : 0,
-            "questionTxt" : questionTxt.text,
-            "timestamp" : FieldValue.serverTimestamp(),
-            "username" : userNameTxt.text!
+            CATEGORY : selectedCategory,
+            NUM_LIKES : 0,
+            NUM_COMMENTS : 0,
+            QUESTION_TXT : questionTxt.text,
+            TIMESTAMP : FieldValue.serverTimestamp(),
+            USERNAME : username
         ]) { (err) in
             if let err = err {
                 debugPrint("Error adding document: \(err)")
@@ -54,7 +56,14 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
     }
     
     @IBAction func categoryChanged(_ sender: Any) {
-        
+        switch categorySegment.selectedSegmentIndex {
+        case 0:
+            selectedCategory = QuestionCategory.funny.rawValue
+        case 1:
+            selectedCategory = QuestionCategory.serious.rawValue
+        default:
+            selectedCategory = QuestionCategory.popular.rawValue
+        }
     }
     
 }

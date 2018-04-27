@@ -52,10 +52,13 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6D1-QH-ZX7">
                                 <rect key="frame" x="16" y="72" width="343" height="29"/>
                                 <segments>
-                                    <segment title="funny"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
+                                    <segment title="Funny"/>
+                                    <segment title="Serious"/>
+                                    <segment title="popular"/>
                                 </segments>
+                                <connections>
+                                    <action selector="categoryChanged:" destination="sjY-2U-TUJ" eventType="valueChanged" id="fPD-u3-STK"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRm-ce-V0m">
                                 <rect key="frame" x="42" y="120" width="291" height="30"/>
@@ -83,18 +86,6 @@
                                     <action selector="postBtnTapped:" destination="sjY-2U-TUJ" eventType="touchUpInside" id="G0n-4t-Gsv"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="D9o-r7-stx">
-                                <rect key="frame" x="16" y="72" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="funny" enabled="NO"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
-                                </segments>
-                                <connections>
-                                    <action selector="categoryChanged:" destination="sjY-2U-TUJ" eventType="valueChanged" id="VJY-0n-jOC"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -114,7 +105,7 @@
                         <viewLayoutGuide key="safeArea" id="uxf-6M-jgY"/>
                     </view>
                     <connections>
-                        <outlet property="categorySegment" destination="D9o-r7-stx" id="h1D-cN-e4i"/>
+                        <outlet property="categorySegment" destination="6D1-QH-ZX7" id="PmS-dt-XVc"/>
                         <outlet property="postBtn" destination="BUm-DC-r9k" id="W0L-oV-jOy"/>
                         <outlet property="questionTxt" destination="0Bh-ky-bTQ" id="aVL-rF-hpS"/>
                         <outlet property="userNameTxt" destination="MRm-ce-V0m" id="aXt-w5-fNx"/>

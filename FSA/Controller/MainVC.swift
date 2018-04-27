@@ -8,8 +8,13 @@
 
 import UIKit
 
+enum QuestionCategory: Swift.String {
+    case funny,serious,popular
+}
+
 class MainVC: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

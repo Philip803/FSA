@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		242E045D2092A5880036DBE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 242E045C2092A5880036DBE6 /* GoogleService-Info.plist */; };
+		242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E045E2092B4920036DBE6 /* AddQuestionVC.swift */; };
 		29A0E08AB4747E74F1C38567 /* Pods_FSAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6760EF9FBC15ABDB2E4A385 /* Pods_FSAUITests.framework */; };
 		8500CA3FF55A9F1BC3B77F8C /* Pods_FSATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ED1844335646C166FF1246 /* Pods_FSATests.framework */; };
 		D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B6F20917C51003CC091 /* AppDelegate.swift */; };
-		D48A6B7220917C51003CC091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B7120917C51003CC091 /* ViewController.swift */; };
+		D48A6B7220917C51003CC091 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B7120917C51003CC091 /* MainVC.swift */; };
 		D48A6B7520917C51003CC091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7320917C51003CC091 /* Main.storyboard */; };
 		D48A6B7720917C55003CC091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7620917C55003CC091 /* Assets.xcassets */; };
 		D48A6B7A20917C55003CC091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7820917C55003CC091 /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 		08812BD0CBC86412B90E2DBE /* Pods-FSATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSATests/Pods-FSATests.debug.xcconfig"; sourceTree = "<group>"; };
 		10ED1844335646C166FF1246 /* Pods_FSATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		242E045C2092A5880036DBE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		242E045E2092B4920036DBE6 /* AddQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionVC.swift; sourceTree = "<group>"; };
 		2FE3241C7EE7EB851DA5451C /* Pods-FSAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSAUITests/Pods-FSAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		379E2A7607E7AB44B7DBC851 /* Pods-FSATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSATests/Pods-FSATests.release.xcconfig"; sourceTree = "<group>"; };
 		7030DD1DAFEFE957110C0AB7 /* Pods-FSA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSA.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSA/Pods-FSA.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,7 +52,7 @@
 		BF66D401511B76C1187CCD56 /* Pods-FSA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSA/Pods-FSA.debug.xcconfig"; sourceTree = "<group>"; };
 		D48A6B6C20917C51003CC091 /* FSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A6B6F20917C51003CC091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D48A6B7120917C51003CC091 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D48A6B7120917C51003CC091 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D48A6B7420917C51003CC091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D48A6B7620917C55003CC091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48A6B7920917C55003CC091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242E04602092B49B0036DBE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		242E04612092B4A10036DBE6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D48A6B7120917C51003CC091 /* MainVC.swift */,
+				242E045E2092B4920036DBE6 /* AddQuestionVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		242E04622092B4A80036DBE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		57878DD9C38F993F3E2538BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +164,10 @@
 		D48A6B6E20917C51003CC091 /* FSA */ = {
 			isa = PBXGroup;
 			children = (
+				242E04622092B4A80036DBE6 /* View */,
+				242E04612092B4A10036DBE6 /* Controller */,
+				242E04602092B49B0036DBE6 /* Model */,
 				D48A6B6F20917C51003CC091 /* AppDelegate.swift */,
-				D48A6B7120917C51003CC091 /* ViewController.swift */,
 				D48A6B7320917C51003CC091 /* Main.storyboard */,
 				D48A6B7620917C55003CC091 /* Assets.xcassets */,
 				D48A6B7820917C55003CC091 /* LaunchScreen.storyboard */,
@@ -395,7 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48A6B7220917C51003CC091 /* ViewController.swift in Sources */,
+				D48A6B7220917C51003CC091 /* MainVC.swift in Sources */,
+				242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */,
 				D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,7 +602,10 @@
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = FullStackStackathon.FSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -591,7 +622,10 @@
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = FullStackStackathon.FSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -608,7 +642,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSATests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = FullStackStackathon.FSATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -626,7 +664,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSATests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = FullStackStackathon.FSATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -643,7 +685,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSAUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = FullStackStackathon.FSAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -660,7 +706,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSAUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = FullStackStackathon.FSAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

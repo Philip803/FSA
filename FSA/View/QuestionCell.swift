@@ -23,7 +23,10 @@ class QuestionCell: UITableViewCell {
     }
 
     func configureCell ( question : Question){
-        
+        usernameLabel.text = question.username
+//        timestampLabel.text = question.timestamp
+        questionTxtLabel.text = question.questionTxt
+        likesNumLabel.text = String(question.numLikes)
     }
     
 }

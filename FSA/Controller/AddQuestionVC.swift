@@ -18,7 +18,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
     @IBOutlet weak var postBtn: UIButton!
     
     //Variables
-    private var selectedCategory = QuestionCategory.funny.rawValue
+    private var selectedCategory = QuestionCategory.easy.rawValue
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,11 +58,11 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
     @IBAction func categoryChanged(_ sender: Any) {
         switch categorySegment.selectedSegmentIndex {
         case 0:
-            selectedCategory = QuestionCategory.funny.rawValue
+            selectedCategory = QuestionCategory.easy.rawValue
         case 1:
-            selectedCategory = QuestionCategory.serious.rawValue
+            selectedCategory = QuestionCategory.normal.rawValue
         default:
-            selectedCategory = QuestionCategory.popular.rawValue
+            selectedCategory = QuestionCategory.crazy.rawValue
         }
     }
     

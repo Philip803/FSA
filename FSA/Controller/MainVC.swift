@@ -9,7 +9,7 @@
 import UIKit
 
 enum QuestionCategory: Swift.String {
-    case funny,serious,popular
+    case easy,normal,crazy,popular
 }
 
 class MainVC: UIViewController {

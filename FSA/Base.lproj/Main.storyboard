@@ -52,9 +52,9 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6D1-QH-ZX7">
                                 <rect key="frame" x="16" y="72" width="343" height="29"/>
                                 <segments>
-                                    <segment title="Funny"/>
-                                    <segment title="Serious"/>
-                                    <segment title="popular"/>
+                                    <segment title="easy"/>
+                                    <segment title="normal"/>
+                                    <segment title="hard"/>
                                 </segments>
                                 <connections>
                                     <action selector="categoryChanged:" destination="sjY-2U-TUJ" eventType="valueChanged" id="fPD-u3-STK"/>

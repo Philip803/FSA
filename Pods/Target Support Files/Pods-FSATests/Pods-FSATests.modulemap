@@ -1,0 +1,6 @@
+framework module Pods_FSATests {
+  umbrella header "Pods-FSATests-umbrella.h"
+
+  export *
+  module * { export * }
+}

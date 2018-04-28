@@ -18,6 +18,7 @@
 		8500CA3FF55A9F1BC3B77F8C /* Pods_FSATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ED1844335646C166FF1246 /* Pods_FSATests.framework */; };
 		D40EA5832094F743009976A1 /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA5822094F743009976A1 /* CommentsVC.swift */; };
 		D40EA58520950124009976A1 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA58420950124009976A1 /* CommentCell.swift */; };
+		D40EA5872095045C009976A1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA5862095045C009976A1 /* Comment.swift */; };
 		D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B6F20917C51003CC091 /* AppDelegate.swift */; };
 		D48A6B7220917C51003CC091 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B7120917C51003CC091 /* MainVC.swift */; };
 		D48A6B7520917C51003CC091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7320917C51003CC091 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		BF66D401511B76C1187CCD56 /* Pods-FSA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSA/Pods-FSA.debug.xcconfig"; sourceTree = "<group>"; };
 		D40EA5822094F743009976A1 /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
 		D40EA58420950124009976A1 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		D40EA5862095045C009976A1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		D48A6B6C20917C51003CC091 /* FSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A6B6F20917C51003CC091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48A6B7120917C51003CC091 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				242E04692092DC000036DBE6 /* Question.swift */,
+				D40EA5862095045C009976A1 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				242E046C2092DD740036DBE6 /* QuestionCell.swift in Sources */,
 				D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */,
 				242E04682092C7A60036DBE6 /* Constants.swift in Sources */,
+				D40EA5872095045C009976A1 /* Comment.swift in Sources */,
 				D40EA5832094F743009976A1 /* CommentsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

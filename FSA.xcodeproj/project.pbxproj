@@ -12,6 +12,8 @@
 		242E04682092C7A60036DBE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E04672092C7A60036DBE6 /* Constants.swift */; };
 		242E046A2092DC000036DBE6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E04692092DC000036DBE6 /* Question.swift */; };
 		242E046C2092DD740036DBE6 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E046B2092DD740036DBE6 /* QuestionCell.swift */; };
+		242E046E20949DD60036DBE6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E046D20949DD60036DBE6 /* LoginVC.swift */; };
+		242E047020949F980036DBE6 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242E046F20949F980036DBE6 /* CreateUserVC.swift */; };
 		29A0E08AB4747E74F1C38567 /* Pods_FSAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6760EF9FBC15ABDB2E4A385 /* Pods_FSAUITests.framework */; };
 		8500CA3FF55A9F1BC3B77F8C /* Pods_FSATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ED1844335646C166FF1246 /* Pods_FSATests.framework */; };
 		D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B6F20917C51003CC091 /* AppDelegate.swift */; };
@@ -49,6 +51,8 @@
 		242E04672092C7A60036DBE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		242E04692092DC000036DBE6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		242E046B2092DD740036DBE6 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		242E046D20949DD60036DBE6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		242E046F20949F980036DBE6 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
 		2FE3241C7EE7EB851DA5451C /* Pods-FSAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSAUITests/Pods-FSAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		379E2A7607E7AB44B7DBC851 /* Pods-FSATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSATests/Pods-FSATests.release.xcconfig"; sourceTree = "<group>"; };
 		7030DD1DAFEFE957110C0AB7 /* Pods-FSA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSA.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSA/Pods-FSA.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 			children = (
 				D48A6B7120917C51003CC091 /* MainVC.swift */,
 				242E045E2092B4920036DBE6 /* AddQuestionVC.swift */,
+				242E046D20949DD60036DBE6 /* LoginVC.swift */,
+				242E046F20949F980036DBE6 /* CreateUserVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FSA/Pods-FSA-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -364,6 +371,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -440,7 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				242E046A2092DC000036DBE6 /* Question.swift in Sources */,
+				242E047020949F980036DBE6 /* CreateUserVC.swift in Sources */,
 				D48A6B7220917C51003CC091 /* MainVC.swift in Sources */,
+				242E046E20949DD60036DBE6 /* LoginVC.swift in Sources */,
 				242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */,
 				242E046C2092DD740036DBE6 /* QuestionCell.swift in Sources */,
 				D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */,
@@ -621,7 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,7 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PC3B29YM2C;
 				INFOPLIST_FILE = FSA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

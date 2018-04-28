@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 //data download from database
 
@@ -27,5 +28,26 @@ class Question {
         self.numComments = numComments
         self.documentId = documentId
     }
+    
+    class func parseData(snapshot : QuerySnapshot?) -> [Question] {
+        var questions = [Question]()
+        
+        guard let snap = snapshot else {return questions}
+        for document in snap.documents {
+            let data = document.data()
+            let username = data[USERNAME] as? String ?? "Anonymous"   //default value
+            let timestamp = data[TIMESTAMP] as? Date ?? Date()
+            let questionTxt = data[QUESTION_TXT] as? String ?? ""
+            let numLikes = data[NUM_LIKES] as? Int ?? 0
+            let numComments = data[NUM_COMMENTS] as? Int ?? 0
+            let documentId = document.documentID
+            
+            let newQuestion = Question(username: username, timestamp: timestamp, questionTxt: questionTxt, numLikes: numLikes, numComments: numComments, documentId: documentId)
+            questions.append(newQuestion)
+        }
+        
+        return questions
+    }
+    
     
 }

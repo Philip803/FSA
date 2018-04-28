@@ -26,7 +26,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
         questionTxt.layer.cornerRadius = 4
         questionTxt.text = "My Random question..."
         questionTxt.delegate = self
-    
+        userNameTxt.text = "Anonymous"
     }
 
     //call when user begin typing
@@ -62,7 +62,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
         case 1:
             selectedCategory = QuestionCategory.normal.rawValue
         default:
-            selectedCategory = QuestionCategory.crazy.rawValue
+            selectedCategory = QuestionCategory.hard.rawValue
         }
     }
     

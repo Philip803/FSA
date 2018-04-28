@@ -9,6 +9,7 @@ target 'FSA' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
+pod 'Firebase/Auth'
 
   target 'FSATests' do
     inherit! :search_paths

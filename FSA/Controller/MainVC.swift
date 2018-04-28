@@ -24,7 +24,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     private var questionsCollectionRef : CollectionReference!
     private var questionsListener: ListenerRegistration!
     private var selectedCategory = QuestionCategory.easy.rawValue
-    private var handle: AuthStateDidChangeListenerHandle?   //handle user access token
+    private var handle: AuthStateDidChangeListenerHandle?   //handle user auth access token
     
     
     override func viewDidLoad() {
@@ -76,6 +76,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             questionsListener.remove()
         }
     }
+    
     @IBAction func logoutTapped(_ sender: Any) {
         let firebasesAuth = Auth.auth()
         do {
@@ -118,7 +119,6 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as? QuestionCell {
             cell.configureCell(question : questions[indexPath.row])
@@ -133,7 +133,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toComments", sender: questions[indexPath.row])
+//        performSegue(withIdentifier: "toComments", sender: questions[indexPath.row])
     }
     
     //pre check before segue
@@ -146,7 +146,6 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    
 }
 
 

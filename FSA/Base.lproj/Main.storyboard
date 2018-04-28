@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -208,7 +207,7 @@
         <!--LoginVC-->
         <scene sceneID="3ys-YI-EmL">
             <objects>
-                <viewController id="exM-fT-Ibl" customClass="LoginVC" customModule="FSA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="exM-fT-Ibl" customClass="LoginVC" customModule="FSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QcW-sg-fxN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,7 +250,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="createUserTapped:" destination="exM-fT-Ibl" eventType="touchUpInside" id="d6M-Ry-KRH"/>
+                                    <segue destination="ztW-mF-ZPU" kind="show" id="QqW-Bd-gKG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -276,7 +275,7 @@
                         <viewLayoutGuide key="safeArea" id="4V5-Y5-pVG"/>
                     </view>
                     <connections>
-                        <outlet property="createUserBtn" destination="2ad-gk-oL9" id="FaB-PE-A2y"/>
+                        <outlet property="createUserBtn" destination="2ad-gk-oL9" id="q2J-gs-peJ"/>
                         <outlet property="emailTxt" destination="NBX-4V-f3m" id="tuZ-6T-Niz"/>
                         <outlet property="loginBtn" destination="emx-2f-fut" id="290-Tr-SZ4"/>
                         <outlet property="passpordTxt" destination="8A0-e1-zcZ" id="cSi-mY-zC4"/>

@@ -24,6 +24,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     private var questionsCollectionRef : CollectionReference!
     private var questionsListener: ListenerRegistration!
     private var selectedCategory = QuestionCategory.easy.rawValue
+    private var handle: AuthStateDidChangeListenerHandle?   //handle user access token
     
     
     override func viewDidLoad() {
@@ -55,9 +56,25 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     //fetch data from db when view appear
     override func viewWillAppear(_ animated: Bool) {
-        setListener()
-        
-        //        questionsCollectionRef.getDocuments // one time
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                //not login
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                self.setListener()
+            }
+        })
+        // questionsCollectionRef.getDocuments // one time fetch data
+    }
+    
+    //del arr when leave view for best practice
+    override func viewDidDisappear(_ animated: Bool) {
+        //only remove if listener loaded from server
+        if questionsListener != nil {
+            questionsListener.remove()
+        }
     }
     
     func setListener(){
@@ -93,10 +110,6 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-    //del arr when leave view for best practice
-    override func viewDidDisappear(_ animated: Bool) {
-        questionsListener.remove()
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as? QuestionCell {

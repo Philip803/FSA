@@ -132,5 +132,22 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         return questions.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toComments", sender: questions[indexPath.row])
+    }
+    
+    //pre check before segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments" {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let question = sender as? Question {
+                    destinationVC.question = question   //passint to comments variable
+                }
+            }
+        }
+    }
+    
 }
+
+
 

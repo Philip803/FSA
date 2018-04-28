@@ -77,19 +77,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                         debugPrint("Error fetching docs: \(err)")
                     } else {
                         self.questions.removeAll()
-                        guard let snap = snapshot else {return}
-                        for document in snap.documents {
-                            let data = document.data()
-                            let username = data[USERNAME] as? String ?? "Anonymous"   //default value
-                            let timestamp = data[TIMESTAMP] as? Date ?? Date()
-                            let questionTxt = data[QUESTION_TXT] as? String ?? ""
-                            let numLikes = data[NUM_LIKES] as? Int ?? 0
-                            let numComments = data[NUM_COMMENTS] as? Int ?? 0
-                            let documentId = document.documentID
-                            
-                            let newQuestion = Question(username: username, timestamp: timestamp, questionTxt: questionTxt, numLikes: numLikes, numComments: numComments, documentId: documentId)
-                            self.questions.append(newQuestion)
-                        }
+                        self.questions = Question.parseData(snapshot: snapshot)
                         self.tableView.reloadData()
                 }
             }
@@ -121,7 +109,6 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return questions.count
     }
-    
     
 }
 

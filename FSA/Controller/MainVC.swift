@@ -53,9 +53,17 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         setListener()
     }
     
+    //fetch data from db when view appear
+    override func viewWillAppear(_ animated: Bool) {
+        setListener()
+        
+        //        questionsCollectionRef.getDocuments // one time
+    }
+    
     func setListener(){
 
         if selectedCategory == QuestionCategory.popular.rawValue {
+            
             questionsListener = questionsCollectionRef
                 .order(by: NUM_LIKES, descending: true)
                 .addSnapshotListener { (snapshot, error) in
@@ -67,6 +75,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                         self.tableView.reloadData()
                     }
             }
+            
         } else {
             
             questionsListener = questionsCollectionRef
@@ -83,13 +92,6 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-    }
-    
-    //fetch data from db when view appear
-    override func viewWillAppear(_ animated: Bool) {
-        setListener()
-        
-//        questionsCollectionRef.getDocuments // one time
     }
 
     //del arr when leave view for best practice

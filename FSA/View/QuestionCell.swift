@@ -31,7 +31,7 @@ class QuestionCell: UITableViewCell {
     //swift 4 -> obj c
     @objc func likeTapped(){
         //Method 1
-        Firestore.firestore().collection(QUESTION_REF).document(question.documentId).setData(["numLikes" : question.numLikes + 1], options: SetOptions.merge())
+//        Firestore.firestore().collection(QUESTION_REF).document(question.documentId).setData(["numLikes" : question.numLikes + 1], options: SetOptions.merge())
         //merge numLikes to exists data, otherwise del all
         
         //Method 2
@@ -45,7 +45,6 @@ class QuestionCell: UITableViewCell {
         usernameLabel.text = question.username
         questionTxtLabel.text = question.questionTxt
         likesNumLabel.text = String(question.numLikes)
-        print(question.numLikes)
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, hh:mm"
         let timestamp = formatter.string(from: question.timestamp)

@@ -11,6 +11,7 @@ import Foundation
 //const for collection
 
 let QUESTION_REF = "questions"
+let USER_REF = "users"
 
 let CATEGORY = "category"
 let NUM_COMMENTS = "numComments"
@@ -18,4 +19,4 @@ let NUM_LIKES = "numLikes"
 let QUESTION_TXT = "questionTxt"
 let TIMESTAMP = "timestamp"
 let USERNAME = "username"
-
+let DATE_CREATED = "dateCreated"

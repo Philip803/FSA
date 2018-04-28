@@ -133,7 +133,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "toComments", sender: questions[indexPath.row])
+     //   performSegue(withIdentifier: "toComments", sender: questions[indexPath.row])
     }
     
     //pre check before segue

@@ -26,6 +26,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
         questionTxt.layer.cornerRadius = 4
         questionTxt.text = "My Random question..."
         questionTxt.delegate = self
+        userNameTxt.text = "Anonymous"
     
     }
 

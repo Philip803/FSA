@@ -20,6 +20,7 @@
 		D40EA58520950124009976A1 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA58420950124009976A1 /* CommentCell.swift */; };
 		D40EA5872095045C009976A1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA5862095045C009976A1 /* Comment.swift */; };
 		D40EA5892095312C009976A1 /* QRScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA5882095312C009976A1 /* QRScan.swift */; };
+		D40EA58B209538DF009976A1 /* QRcodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA58A209538DF009976A1 /* QRcodeVC.swift */; };
 		D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B6F20917C51003CC091 /* AppDelegate.swift */; };
 		D48A6B7220917C51003CC091 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B7120917C51003CC091 /* MainVC.swift */; };
 		D48A6B7520917C51003CC091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7320917C51003CC091 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		D40EA58420950124009976A1 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		D40EA5862095045C009976A1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		D40EA5882095312C009976A1 /* QRScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScan.swift; sourceTree = "<group>"; };
+		D40EA58A209538DF009976A1 /* QRcodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeVC.swift; sourceTree = "<group>"; };
 		D48A6B6C20917C51003CC091 /* FSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A6B6F20917C51003CC091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48A6B7120917C51003CC091 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				242E046F20949F980036DBE6 /* CreateUserVC.swift */,
 				D40EA5822094F743009976A1 /* CommentsVC.swift */,
 				D40EA5882095312C009976A1 /* QRScan.swift */,
+				D40EA58A209538DF009976A1 /* QRcodeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			files = (
 				242E046A2092DC000036DBE6 /* Question.swift in Sources */,
 				242E047020949F980036DBE6 /* CreateUserVC.swift in Sources */,
+				D40EA58B209538DF009976A1 /* QRcodeVC.swift in Sources */,
 				D48A6B7220917C51003CC091 /* MainVC.swift in Sources */,
 				242E046E20949DD60036DBE6 /* LoginVC.swift in Sources */,
 				242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */,

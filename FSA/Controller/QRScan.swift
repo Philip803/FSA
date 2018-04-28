@@ -104,8 +104,8 @@ class QRScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 debugPrint("Error adding document: \(err)")
             } else {
                 //if success then go back to previous page
-//                self.navigationController?.popViewController(animated: true)
                 print("WORKS!!!")
+                self.navigationController?.popViewController(animated: true)
             }
         }
         

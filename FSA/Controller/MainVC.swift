@@ -76,11 +76,19 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             questionsListener.remove()
         }
     }
+    @IBAction func logoutTapped(_ sender: Any) {
+        let firebasesAuth = Auth.auth()
+        do {
+            try firebasesAuth.signOut()
+        } catch let signoutError as NSError {
+            debugPrint("Error signing out \(signoutError)")
+        }
+    }
     
     func setListener(){
 
         if selectedCategory == QuestionCategory.popular.rawValue {
-            
+             
             questionsListener = questionsCollectionRef
                 .order(by: NUM_LIKES, descending: true)
                 .addSnapshotListener { (snapshot, error) in

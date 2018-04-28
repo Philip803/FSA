@@ -62,7 +62,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
         case 1:
             selectedCategory = QuestionCategory.normal.rawValue
         default:
-            selectedCategory = QuestionCategory.crazy.rawValue
+            selectedCategory = QuestionCategory.hard.rawValue
         }
     }
     

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 enum QuestionCategory: Swift.String {
-    case easy,normal,crazy,popular
+    case easy,normal,hard,popular
 }
 
 class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
@@ -22,6 +22,8 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     //Variables
     private var questions = [Question]()
     private var questionsCollectionRef : CollectionReference!
+    private var questionsListener: ListenerRegistration!
+    private var selectedCategory = QuestionCategory.easy.rawValue
     
     
     override func viewDidLoad() {
@@ -35,12 +37,32 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         questionsCollectionRef = Firestore.firestore().collection(QUESTION_REF)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        //fetch call
-        questionsCollectionRef.getDocuments { (snapshot, error) in
+    @IBAction func categoryChanged(_ sender: Any) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            selectedCategory = QuestionCategory.easy.rawValue
+        case 1:
+            selectedCategory = QuestionCategory.normal.rawValue
+        case 2:
+            selectedCategory = QuestionCategory.hard.rawValue
+        default:
+            selectedCategory = QuestionCategory.popular.rawValue
+        }
+        
+        questionsListener.remove()
+        setListener()
+    }
+    
+    func setListener(){
+        //add listener
+        questionsListener = questionsCollectionRef
+            .whereField(CATEGORY, isEqualTo: selectedCategory)
+            .order(by: TIMESTAMP, descending: true)
+            .addSnapshotListener { (snapshot, error) in
             if let err = error {
                 debugPrint("Error fetching docs: \(err)")
             } else {
+                self.questions.removeAll()
                 guard let snap = snapshot else {return}
                 for document in snap.documents {
                     let data = document.data()
@@ -58,7 +80,21 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    //fetch data from db when view appear
+    override func viewWillAppear(_ animated: Bool) {
+        
+        setListener()
+        
+//        questionsCollectionRef.getDocuments { (snapshot, error) in // one time
+//
+    }
 
+    //del arr when leave view for best practice
+    override func viewDidDisappear(_ animated: Bool) {
+        questionsListener.remove()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as? QuestionCell {
             cell.configureCell(question : questions[indexPath.row])

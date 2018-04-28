@@ -24,9 +24,13 @@ class QuestionCell: UITableViewCell {
 
     func configureCell ( question : Question){
         usernameLabel.text = question.username
-//        timestampLabel.text = question.timestamp
         questionTxtLabel.text = question.questionTxt
         likesNumLabel.text = String(question.numLikes)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, hh:mm"
+        let timestamp = formatter.string(from: question.timestamp)
+        timestampLabel.text = timestamp
     }
     
 }

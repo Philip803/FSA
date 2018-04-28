@@ -13,18 +13,19 @@ class CommentsVC: UIViewController {
     //Variable
     var question : Question!
     
+    //Outlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addCommentTxt: UITextField!
+    @IBOutlet weak var keyboardView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    
+
+    @IBAction func addCommentTapped(_ sender: Any) {
     }
     
-
-
-
 }

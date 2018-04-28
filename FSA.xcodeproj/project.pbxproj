@@ -17,6 +17,7 @@
 		29A0E08AB4747E74F1C38567 /* Pods_FSAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6760EF9FBC15ABDB2E4A385 /* Pods_FSAUITests.framework */; };
 		8500CA3FF55A9F1BC3B77F8C /* Pods_FSATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ED1844335646C166FF1246 /* Pods_FSATests.framework */; };
 		D40EA5832094F743009976A1 /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA5822094F743009976A1 /* CommentsVC.swift */; };
+		D40EA58520950124009976A1 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA58420950124009976A1 /* CommentCell.swift */; };
 		D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B6F20917C51003CC091 /* AppDelegate.swift */; };
 		D48A6B7220917C51003CC091 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B7120917C51003CC091 /* MainVC.swift */; };
 		D48A6B7520917C51003CC091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7320917C51003CC091 /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		B7C8E59B6E9B19FEFE73BEA5 /* Pods-FSAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSAUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSAUITests/Pods-FSAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF66D401511B76C1187CCD56 /* Pods-FSA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSA/Pods-FSA.debug.xcconfig"; sourceTree = "<group>"; };
 		D40EA5822094F743009976A1 /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
+		D40EA58420950124009976A1 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		D48A6B6C20917C51003CC091 /* FSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A6B6F20917C51003CC091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48A6B7120917C51003CC091 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				242E046B2092DD740036DBE6 /* QuestionCell.swift */,
+				D40EA58420950124009976A1 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				D48A6B7220917C51003CC091 /* MainVC.swift in Sources */,
 				242E046E20949DD60036DBE6 /* LoginVC.swift in Sources */,
 				242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */,
+				D40EA58520950124009976A1 /* CommentCell.swift in Sources */,
 				242E046C2092DD740036DBE6 /* QuestionCell.swift in Sources */,
 				D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */,
 				242E04682092C7A60036DBE6 /* Constants.swift in Sources */,

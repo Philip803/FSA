@@ -27,7 +27,6 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
         questionTxt.text = "My Random question..."
         questionTxt.delegate = self
         userNameTxt.text = "Anonymous"
-    
     }
 
     //call when user begin typing

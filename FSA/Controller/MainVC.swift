@@ -91,7 +91,6 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
-        
     }
 
     //del arr when leave view for best practice

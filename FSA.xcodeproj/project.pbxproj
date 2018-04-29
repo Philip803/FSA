@@ -22,6 +22,11 @@
 		D40EA5892095312C009976A1 /* QRScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA5882095312C009976A1 /* QRScan.swift */; };
 		D40EA58B209538DF009976A1 /* QRcodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA58A209538DF009976A1 /* QRcodeVC.swift */; };
 		D40EA58F20957A7C009976A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA58E20957A7C009976A1 /* User.swift */; };
+		D40EA5912095FB04009976A1 /* CoreMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA5902095FB04009976A1 /* CoreMLVC.swift */; };
+		D40EA59320963862009976A1 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA59220963862009976A1 /* RoundedShadowView.swift */; };
+		D40EA595209639DE009976A1 /* RoundedShowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA594209639DE009976A1 /* RoundedShowButton.swift */; };
+		D40EA59720963A2F009976A1 /* RoundedShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EA59620963A2F009976A1 /* RoundedShadowImageView.swift */; };
+		D40EA59920965971009976A1 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D40EA59820965971009976A1 /* SqueezeNet.mlmodel */; };
 		D48A6B7020917C51003CC091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B6F20917C51003CC091 /* AppDelegate.swift */; };
 		D48A6B7220917C51003CC091 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B7120917C51003CC091 /* MainVC.swift */; };
 		D48A6B7520917C51003CC091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7320917C51003CC091 /* Main.storyboard */; };
@@ -72,6 +77,11 @@
 		D40EA5882095312C009976A1 /* QRScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScan.swift; sourceTree = "<group>"; };
 		D40EA58A209538DF009976A1 /* QRcodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeVC.swift; sourceTree = "<group>"; };
 		D40EA58E20957A7C009976A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D40EA5902095FB04009976A1 /* CoreMLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLVC.swift; sourceTree = "<group>"; };
+		D40EA59220963862009976A1 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		D40EA594209639DE009976A1 /* RoundedShowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShowButton.swift; sourceTree = "<group>"; };
+		D40EA59620963A2F009976A1 /* RoundedShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowImageView.swift; sourceTree = "<group>"; };
+		D40EA59820965971009976A1 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		D48A6B6C20917C51003CC091 /* FSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A6B6F20917C51003CC091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48A6B7120917C51003CC091 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -135,6 +145,7 @@
 				D40EA5822094F743009976A1 /* CommentsVC.swift */,
 				D40EA5882095312C009976A1 /* QRScan.swift */,
 				D40EA58A209538DF009976A1 /* QRcodeVC.swift */,
+				D40EA5902095FB04009976A1 /* CoreMLVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +155,9 @@
 			children = (
 				242E046B2092DD740036DBE6 /* QuestionCell.swift */,
 				D40EA58420950124009976A1 /* CommentCell.swift */,
+				D40EA59220963862009976A1 /* RoundedShadowView.swift */,
+				D40EA594209639DE009976A1 /* RoundedShowButton.swift */,
+				D40EA59620963A2F009976A1 /* RoundedShadowImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +193,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D40EA59A209659DF009976A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D48A6B6320917C51003CC091 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +225,8 @@
 		D48A6B6E20917C51003CC091 /* FSA */ = {
 			isa = PBXGroup;
 			children = (
+				D40EA59820965971009976A1 /* SqueezeNet.mlmodel */,
+				D40EA59A209659DF009976A1 /* Resources */,
 				242E04662092C7920036DBE6 /* Utilitues */,
 				242E04622092B4A80036DBE6 /* View */,
 				242E04612092B4A10036DBE6 /* Controller */,
@@ -466,9 +489,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				242E046A2092DC000036DBE6 /* Question.swift in Sources */,
+				D40EA59920965971009976A1 /* SqueezeNet.mlmodel in Sources */,
 				242E047020949F980036DBE6 /* CreateUserVC.swift in Sources */,
 				D40EA58B209538DF009976A1 /* QRcodeVC.swift in Sources */,
 				D48A6B7220917C51003CC091 /* MainVC.swift in Sources */,
+				D40EA59720963A2F009976A1 /* RoundedShadowImageView.swift in Sources */,
+				D40EA59320963862009976A1 /* RoundedShadowView.swift in Sources */,
+				D40EA595209639DE009976A1 /* RoundedShowButton.swift in Sources */,
 				242E046E20949DD60036DBE6 /* LoginVC.swift in Sources */,
 				242E045F2092B4920036DBE6 /* AddQuestionVC.swift in Sources */,
 				D40EA58F20957A7C009976A1 /* User.swift in Sources */,
@@ -478,6 +505,7 @@
 				242E04682092C7A60036DBE6 /* Constants.swift in Sources */,
 				D40EA5872095045C009976A1 /* Comment.swift in Sources */,
 				D40EA5832094F743009976A1 /* CommentsVC.swift in Sources */,
+				D40EA5912095FB04009976A1 /* CoreMLVC.swift in Sources */,
 				D40EA5892095312C009976A1 /* QRScan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

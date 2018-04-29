@@ -33,12 +33,15 @@ class QRcodeVC: UIViewController {
                 if let err = error {
                     debugPrint("Error fetching docs: \(err)")
                 } else {
-                    print(self.userArr)
                     self.userArr.removeAll()
                     self.userArr = User.parseData(snapshot: snapshot)
-                    print("HIT HERE")
                     print(self.userArr[0].status)
                     self.checkInStatusTxt.text = self.userArr[0].status
+                    
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "MMM d, hh:mm"
+                    let timestamp = formatter.string(from: self.userArr[0].timestamp)
+                    self.checkInTime.text = timestamp
                 }
         }
     }

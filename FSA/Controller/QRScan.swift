@@ -96,13 +96,17 @@ class QRScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     //if successful got the right code
     func found(code: String) {
-        print(code)
+        if(code == "fullstack"){
+            print(code)
+        } else {
+            print("HAAA")
+        }
         
         //set up with name , add listener to filter out name
         Firestore.firestore().collection("users").document("user").setData([
             "name" : "omri",
             "checkin" : code,
-            "status" : "Present",
+            "status" : "PRESENT",
             TIMESTAMP : FieldValue.serverTimestamp()
         ]) { err in
             if let err = err {

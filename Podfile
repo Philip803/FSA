@@ -10,6 +10,7 @@ target 'FSA' do
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
+pod 'ROGoogleTranslate'
 
   target 'FSATests' do
     inherit! :search_paths

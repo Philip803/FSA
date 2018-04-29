@@ -112,6 +112,10 @@ class CoreMLVC: UIViewController {
                 let confidence = Int(classification.confidence * 100)
                 self.identificationLbl.text = identification
                 self.confidenceLbl.text = "CONFIDENCE: \(confidence)%"
+                
+                //call api to transaction here
+                // "identification"
+                
                 let completeSentence = "This looks like a \(identification) and I'm \(confidence) percent sure."
                 synthesizeSpeech(fromString: completeSentence)
                 break
@@ -124,7 +128,8 @@ class CoreMLVC: UIViewController {
         //pass in the string
         let speechUtterance = AVSpeechUtterance(string: string)
         
-        //change language
+        //change the voice of the language
+        //https://stackoverflow.com/questions/23827145/how-to-get-difference-language-code-for-ios-7-avspeechutterance-text-to-speech
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "es-MX")
         speechSynthesizer.speak(speechUtterance)
     }
@@ -139,8 +144,8 @@ extension CoreMLVC: AVCapturePhotoCaptureDelegate {
             photoData = photo.fileDataRepresentation()
             
             do {
-                let model = try VNCoreMLModel(for: SqueezeNet().model)  //model from apple
-                let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)   //brain
+                let model = try VNCoreMLModel(for: SqueezeNet().model)  //model from apple website
+                let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)   //setup a human brain for iphone ;)
                 let handler = VNImageRequestHandler(data: photoData!)   //compare
                 try handler.perform([request])  //perform
             } catch {

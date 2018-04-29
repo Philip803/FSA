@@ -33,7 +33,7 @@ class User {
             let status = data["status"] as? String ?? ""
             
             let newUserInfo = User(username: username, timestamp: timestamp, status: status)
-            
+            print(status, "HELLO")
             user.append(newUserInfo)
         }
         

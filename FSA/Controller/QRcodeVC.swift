@@ -26,7 +26,6 @@ class QRcodeVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("HIT HERE")
         userListener = userCollectionRef
             .whereField("name", isEqualTo: "omri")
             .order(by: TIMESTAMP, descending: true)
@@ -34,13 +33,22 @@ class QRcodeVC: UIViewController {
                 if let err = error {
                     debugPrint("Error fetching docs: \(err)")
                 } else {
+                    print(self.userArr)
                     self.userArr.removeAll()
                     self.userArr = User.parseData(snapshot: snapshot)
+                    print("HIT HERE")
                     print(self.userArr[0].status)
-                    self.checkInTime.text = self.userArr[0].status
+                    self.checkInStatusTxt.text = self.userArr[0].status
                 }
         }
     }
     
+    //remove listener
+    override func viewDidDisappear(_ animated: Bool) {
+        //only remove if listener loaded from server
+        if userListener != nil {
+            userListener.remove()
+        }
+    }
     
 }

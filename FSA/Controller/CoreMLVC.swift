@@ -27,6 +27,7 @@ class CoreMLVC: UIViewController {
     @IBOutlet weak var identificationLbl: UILabel!
     @IBOutlet weak var confidenceLbl: UILabel!
     @IBOutlet weak var roundedLblView: RoundedShadowView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBAction func goBackTapped(_ sender: Any) {
         captureSession.stopRunning()
@@ -34,15 +35,13 @@ class CoreMLVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // start up the camera
      }
  
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         previewLayer.frame = cameraView.bounds
         speechSynthesizer.delegate = self
-//        spinner.isHidden = true
+        spinner.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,6 +82,10 @@ class CoreMLVC: UIViewController {
     }
     
     @objc func didTapCameraView(){
+        self.cameraView.isUserInteractionEnabled = false
+        self.spinner.isHidden = false
+        self.spinner.startAnimating()
+        
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
         let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType, kCVPixelBufferWidthKey as String: 160, kCVPixelBufferHeightKey as String: 160]
@@ -120,6 +123,9 @@ class CoreMLVC: UIViewController {
     func synthesizeSpeech(fromString string: String) {
         //pass in the string
         let speechUtterance = AVSpeechUtterance(string: string)
+        
+        //change language
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "es-MX")
         speechSynthesizer.speak(speechUtterance)
     }
     
@@ -151,8 +157,9 @@ extension CoreMLVC: AVCapturePhotoCaptureDelegate {
 
 extension CoreMLVC: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        //once done speaking restart anim
         self.cameraView.isUserInteractionEnabled = true
-//        self.spinner.isHidden = true
-//        self.spinner.stopAnimating()
+        self.spinner.isHidden = true
+        self.spinner.stopAnimating()
     }
 }

@@ -400,6 +400,10 @@
                                     <constraint firstAttribute="height" constant="128" id="cyG-bY-2mH"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Pe-D5-W8R">
+                                <rect key="frame" x="314" y="578" width="20" height="20"/>
+                                <color key="color" red="1" green="0.99314998539999999" blue="0.97375795809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -410,10 +414,12 @@
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="bottom" secondItem="1Yb-mm-3Oj" secondAttribute="bottom" constant="8" id="QDe-4h-BdR"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="bottom" secondItem="mg3-m3-Z7T" secondAttribute="bottom" id="TW9-Dt-kNz"/>
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="bottom" secondItem="atZ-rc-F6R" secondAttribute="bottom" constant="15" id="U4L-VF-VO3"/>
+                            <constraint firstItem="2Pe-D5-W8R" firstAttribute="centerY" secondItem="atZ-rc-F6R" secondAttribute="centerY" id="WHh-r5-o8c"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="trailing" secondItem="mg3-m3-Z7T" secondAttribute="trailing" id="a2t-Kh-LF7"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="top" secondItem="8bX-QG-tOM" secondAttribute="top" id="eJg-u0-ozP"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="leading" secondItem="mg3-m3-Z7T" secondAttribute="leading" id="osc-43-Wef"/>
                             <constraint firstItem="1Yb-mm-3Oj" firstAttribute="leading" secondItem="mg3-m3-Z7T" secondAttribute="leading" constant="8" id="pCR-zi-rf6"/>
+                            <constraint firstItem="2Pe-D5-W8R" firstAttribute="centerX" secondItem="atZ-rc-F6R" secondAttribute="centerX" id="rPt-Jb-195"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mg3-m3-Z7T"/>
                     </view>
@@ -424,6 +430,7 @@
                         <outlet property="flashBtn" destination="1Yb-mm-3Oj" id="Ny2-4p-Igr"/>
                         <outlet property="identificationLbl" destination="5gc-FE-pmx" id="7Sb-qO-w6b"/>
                         <outlet property="roundedLblView" destination="duN-Ec-HlU" id="1xg-FG-1ve"/>
+                        <outlet property="spinner" destination="2Pe-D5-W8R" id="wPr-uq-KVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FsF-JW-hB3" userLabel="First Responder" sceneMemberID="firstResponder"/>

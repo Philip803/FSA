@@ -29,13 +29,13 @@ class CoreMLVC: UIViewController {
     @IBOutlet weak var roundedLblView: RoundedShadowView!
     
     @IBAction func goBackTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        captureSession.stopRunning()
+        self.navigationController?.popViewController(animated: true)    //need nav
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // start up the camera
-        
      }
  
     override func viewDidAppear(_ animated: Bool) {

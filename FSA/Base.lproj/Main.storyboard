@@ -324,9 +324,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNK-Mx-Qig">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <rect key="frame" x="75" y="318" width="225" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Ready to Learn some new Word?"/>
                                 <connections>
                                     <segue destination="nPq-o3-a1z" kind="show" id="sZm-29-WTc"/>
                                 </connections>
@@ -359,7 +359,7 @@
                                     <constraint firstAttribute="height" constant="30" id="48x-j0-F0g"/>
                                     <constraint firstAttribute="width" constant="85" id="vHB-fE-jjJ"/>
                                 </constraints>
-                                <state key="normal" title="Flash OFF"/>
+                                <state key="normal" title="OFF"/>
                                 <connections>
                                     <action selector="goBackTapped:" destination="nPq-o3-a1z" eventType="touchUpInside" id="HKq-ai-4a8"/>
                                 </connections>

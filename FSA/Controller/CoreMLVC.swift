@@ -39,7 +39,7 @@ class CoreMLVC: UIViewController {
         super.viewDidAppear(animated)
         previewLayer.frame = cameraView.bounds
         speechSynthesizer.delegate = self
-        spinner.isHidden = true
+//        spinner.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +100,7 @@ class CoreMLVC: UIViewController {
                 self.identificationLbl.text = unknownObjectMessage
                 synthesizeSpeech(fromString: unknownObjectMessage)
                 self.confidenceLbl.text = ""
-                break
+                break   //need break otherwise infinite loop until hit not sure
             } else {
                 let identification = classification.identifier
                 let confidence = Int(classification.confidence * 100)
@@ -147,7 +147,7 @@ extension CoreMLVC: AVCapturePhotoCaptureDelegate {
 extension CoreMLVC: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         self.cameraView.isUserInteractionEnabled = true
-        self.spinner.isHidden = true
-        self.spinner.stopAnimating()
+//        self.spinner.isHidden = true
+//        self.spinner.stopAnimating()
     }
 }

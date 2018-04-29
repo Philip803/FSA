@@ -28,6 +28,9 @@ class CoreMLVC: UIViewController {
     @IBOutlet weak var confidenceLbl: UILabel!
     @IBOutlet weak var roundedLblView: RoundedShadowView!
     
+    @IBAction func goBackTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

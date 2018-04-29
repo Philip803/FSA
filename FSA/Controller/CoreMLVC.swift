@@ -116,7 +116,9 @@ class CoreMLVC: UIViewController {
         }
     }
     
+    //any sting pass it will speak it for us
     func synthesizeSpeech(fromString string: String) {
+        //pass in the string
         let speechUtterance = AVSpeechUtterance(string: string)
         speechSynthesizer.speak(speechUtterance)
     }

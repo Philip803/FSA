@@ -129,7 +129,6 @@
                     <connections>
                         <outlet property="segmentControl" destination="BbV-9n-7HH" id="PEI-bR-fkq"/>
                         <outlet property="tableView" destination="dDJ-zC-7Rn" id="OpR-Zc-RW1"/>
-                        <segue destination="abP-xo-yL5" kind="show" identifier="toComments" id="UHG-Kc-z9X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

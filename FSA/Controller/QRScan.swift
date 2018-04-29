@@ -93,6 +93,7 @@ class QRScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         dismiss(animated: true)
     }
     
+    //if successful got the right code
     func found(code: String) {
         print(code)
         //if code = correct then pass back and alert, else alert wrong

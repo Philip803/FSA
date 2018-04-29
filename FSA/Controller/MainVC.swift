@@ -24,6 +24,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     private var questionsCollectionRef : CollectionReference!
     private var questionsListener: ListenerRegistration!
     private var selectedCategory = QuestionCategory.easy.rawValue
+    private var handle: AuthStateDidChangeListenerHandle?   //handle user auth access token
     
     
     override func viewDidLoad() {
@@ -55,15 +56,41 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     //fetch data from db when view appear
     override func viewWillAppear(_ animated: Bool) {
-        setListener()
-        
-        //        questionsCollectionRef.getDocuments // one time
+        //check if user is login from firebase
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                //not login
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                //login
+                self.setListener()
+            }
+        })
+    }
+    
+    //del arr when leave view for best practice
+    override func viewDidDisappear(_ animated: Bool) {
+        //only remove if listener loaded from server
+        if questionsListener != nil {
+            questionsListener.remove()
+        }
+    }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        let firebasesAuth = Auth.auth()
+        do {
+            try firebasesAuth.signOut()
+        } catch let signoutError as NSError {
+            debugPrint("Error signing out \(signoutError)")
+        }
     }
     
     func setListener(){
 
         if selectedCategory == QuestionCategory.popular.rawValue {
-            
+             
             questionsListener = questionsCollectionRef
                 .order(by: NUM_LIKES, descending: true)
                 .addSnapshotListener { (snapshot, error) in
@@ -93,11 +120,6 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-    //del arr when leave view for best practice
-    override func viewDidDisappear(_ animated: Bool) {
-        questionsListener.remove()
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath) as? QuestionCell {
             cell.configureCell(question : questions[indexPath.row])
@@ -111,5 +133,21 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         return questions.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     //   performSegue(withIdentifier: "toComments", sender: questions[indexPath.row])
+    }
+    
+    //pre check before segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments" {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let question = sender as? Question {
+                    destinationVC.question = question   //passint to comments variable
+                }
+            }
+        }
+    }
 }
+
+
 

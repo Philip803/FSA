@@ -43,6 +43,7 @@ class Question {
             let documentId = document.documentID
             
             let newQuestion = Question(username: username, timestamp: timestamp, questionTxt: questionTxt, numLikes: numLikes, numComments: numComments, documentId: documentId)
+            
             questions.append(newQuestion)
         }
         

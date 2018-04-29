@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreML
 import Vision
 
 class CoreMLVC: UIViewController {
@@ -17,6 +18,8 @@ class CoreMLVC: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     var photoData: Data?
+    
+    var speechSynthesizer = AVSpeechSynthesizer()
     
     @IBOutlet weak var captureImageView: RoundedShadowImageView!
     @IBOutlet weak var cameraView: UIView!
@@ -35,6 +38,8 @@ class CoreMLVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         previewLayer.frame = cameraView.bounds
+        speechSynthesizer.delegate = self
+        spinner.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,6 +89,35 @@ class CoreMLVC: UIViewController {
         cameraOutput.capturePhoto(with: settings , delegate: self)
         
     }
+    
+    func resultsMethod(request: VNRequest, error: Error?) {
+        //if no result then return to prevent vrash
+        guard let results = request.results as? [VNClassificationObservation] else { return }
+        
+        for classification in results {
+            if classification.confidence < 0.5 {
+                let unknownObjectMessage = "I'm not sure what this is. Please try again."
+                self.identificationLbl.text = unknownObjectMessage
+                synthesizeSpeech(fromString: unknownObjectMessage)
+                self.confidenceLbl.text = ""
+                break
+            } else {
+                let identification = classification.identifier
+                let confidence = Int(classification.confidence * 100)
+                self.identificationLbl.text = identification
+                self.confidenceLbl.text = "CONFIDENCE: \(confidence)%"
+                let completeSentence = "This looks like a \(identification) and I'm \(confidence) percent sure."
+                synthesizeSpeech(fromString: completeSentence)
+                break
+            }
+        }
+    }
+    
+    func synthesizeSpeech(fromString string: String) {
+        let speechUtterance = AVSpeechUtterance(string: string)
+        speechSynthesizer.speak(speechUtterance)
+    }
+    
 }
 
 extension CoreMLVC: AVCapturePhotoCaptureDelegate {
@@ -93,8 +127,27 @@ extension CoreMLVC: AVCapturePhotoCaptureDelegate {
         } else {
             photoData = photo.fileDataRepresentation()
             
+            do {
+                let model = try VNCoreMLModel(for: SqueezeNet().model)  //model from apple
+                let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)   //brain
+                let handler = VNImageRequestHandler(data: photoData!)   //compare
+                try handler.perform([request])  //perform
+            } catch {
+                // handle erroes
+                debugPrint(error)
+            }
+            
             let image = UIImage(data: photoData!)
             self.captureImageView.image = image
         }
+    }
+}
+
+
+extension CoreMLVC: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        self.cameraView.isUserInteractionEnabled = true
+        self.spinner.isHidden = true
+        self.spinner.stopAnimating()
     }
 }

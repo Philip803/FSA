@@ -210,49 +210,66 @@
             </objects>
             <point key="canvasLocation" x="1064.8" y="-173.16341829085459"/>
         </scene>
-        <!--View Controller-->
+        <!--RcodeVC-->
         <scene sceneID="yVU-Qt-ket">
             <objects>
-                <viewController id="Bcf-Js-cor" sceneMemberID="viewController">
+                <viewController id="Bcf-Js-cor" customClass="QRcodeVC" customModule="FSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8iC-Qz-nNB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-QB-fvi">
-                                <rect key="frame" x="155" y="470" width="65" height="30"/>
+                                <rect key="frame" x="156" y="472" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Checkin"/>
+                                <state key="normal" title="Check In"/>
                                 <connections>
                                     <segue destination="390-t5-bX1" kind="show" id="2U8-ya-Fs1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Omri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnd-RD-vFC">
-                                <rect key="frame" x="165" y="288" width="45" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Omri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnd-RD-vFC">
+                                <rect key="frame" x="141" y="290" width="95" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age: undefined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9i-VF-JNk">
-                                <rect key="frame" x="132" y="325" width="116" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NickName: Geoff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9i-VF-JNk">
+                                <rect key="frame" x="119" y="327" width="139" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkin Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj2-WD-3Ck">
-                                <rect key="frame" x="135" y="399" width="109" height="29"/>
+                                <rect key="frame" x="66" y="401" width="109" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QZ-KJ-LRs">
-                                <rect key="frame" x="67" y="92" width="241" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullstack_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="4QZ-KJ-LRs">
+                                <rect key="frame" x="57" y="49" width="261" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="iq4-yv-v44"/>
+                                    <constraint firstAttribute="width" constant="261" id="vvI-SL-S9L"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Checkin Status :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdu-rW-VwO">
-                                <rect key="frame" x="107" y="362" width="167" height="29"/>
+                                <rect key="frame" x="57" y="364" width="179" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Absent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeO-wk-9R7">
+                                <rect key="frame" x="237" y="364" width="64" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.081321229716778021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgW-3g-XBl">
+                                <rect key="frame" x="183" y="401" width="151" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -260,8 +277,17 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="axq-tY-j8d" firstAttribute="trailing" secondItem="4QZ-KJ-LRs" secondAttribute="trailing" constant="57" id="6t0-y4-khx"/>
+                            <constraint firstItem="4QZ-KJ-LRs" firstAttribute="top" secondItem="axq-tY-j8d" secondAttribute="top" constant="29" id="lD8-72-QIx"/>
+                            <constraint firstItem="4QZ-KJ-LRs" firstAttribute="leading" secondItem="axq-tY-j8d" secondAttribute="leading" constant="57" id="uGH-5T-LEt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="axq-tY-j8d"/>
                     </view>
+                    <connections>
+                        <outlet property="checkInStatusTxt" destination="aeO-wk-9R7" id="g9q-Kn-V9m"/>
+                        <outlet property="checkInTime" destination="OgW-3g-XBl" id="LLG-is-lEr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="By8-vd-z1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -601,6 +627,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fullstack_Logo" width="300" height="300"/>
         <image name="starIconFilled" width="20" height="19"/>
     </resources>
 </document>

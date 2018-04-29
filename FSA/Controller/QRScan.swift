@@ -14,6 +14,7 @@ class QRScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,20 +97,20 @@ class QRScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     //if successful got the right code
     func found(code: String) {
         print(code)
-        //if code = correct then pass back and alert, else alert wrong
-        Firestore.firestore().collection("user").addDocument(data: [
-            "CHECKIN" : code,
+        
+        //set up with name , add listener to filter out name
+        Firestore.firestore().collection("users").document("user").setData([
+            "name" : "omri",
+            "checkin" : code,
+            "status" : "Present",
             TIMESTAMP : FieldValue.serverTimestamp()
-        ]) { (err) in
+        ]) { err in
             if let err = err {
-                debugPrint("Error adding document: \(err)")
+                print("Error writing document: \(err)")
             } else {
-                //if success then go back to previous page
-                print("WORKS!!!")
-                self.navigationController?.popViewController(animated: true)
+                print("Document successfully written!")
             }
         }
-        
     }
     
     override var prefersStatusBarHidden: Bool {

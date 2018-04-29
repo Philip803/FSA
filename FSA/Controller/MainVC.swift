@@ -56,6 +56,7 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     //fetch data from db when view appear
     override func viewWillAppear(_ animated: Bool) {
+        //check if user is login from firebase
         handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
             if user == nil {
                 //not login
@@ -63,10 +64,10 @@ class MainVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                 let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
                 self.present(loginVC, animated: true, completion: nil)
             } else {
+                //login
                 self.setListener()
             }
         })
-        // questionsCollectionRef.getDocuments // one time fetch data
     }
     
     //del arr when leave view for best practice

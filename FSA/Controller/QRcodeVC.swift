@@ -7,29 +7,40 @@
 //
 
 import UIKit
+import Firebase
 
 class QRcodeVC: UIViewController {
 
+    private var userCollectionRef : CollectionReference!
+    private var userListener : ListenerRegistration!
+    
+    @IBOutlet weak var checkInStatusTxt: UILabel!
+    @IBOutlet weak var checkInTime: UILabel!
+    
+    private var userArr = [User]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        userCollectionRef = Firestore.firestore().collection("users")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        print("HIT HERE")
+        userListener = userCollectionRef
+            .whereField("name", isEqualTo: "omri")
+            .order(by: TIMESTAMP, descending: true)
+            .addSnapshotListener { (snapshot, error) in
+                if let err = error {
+                    debugPrint("Error fetching docs: \(err)")
+                } else {
+                    self.userArr.removeAll()
+                    self.userArr = User.parseData(snapshot: snapshot)
+                    print(self.userArr[0].status)
+                    self.checkInTime.text = self.userArr[0].status
+                }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

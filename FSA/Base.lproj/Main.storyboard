@@ -527,17 +527,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TO8-r1-HBZ" firstAttribute="leading" secondItem="mg3-m3-Z7T" secondAttribute="leading" id="1At-E3-1HJ"/>
                             <constraint firstItem="duN-Ec-HlU" firstAttribute="top" secondItem="mg3-m3-Z7T" secondAttribute="top" constant="15" id="ECS-78-uy1"/>
                             <constraint firstItem="duN-Ec-HlU" firstAttribute="leading" secondItem="mg3-m3-Z7T" secondAttribute="leading" constant="20" id="NFs-kT-03g"/>
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="trailing" secondItem="atZ-rc-F6R" secondAttribute="trailing" constant="15" id="NxQ-s8-Rec"/>
+                            <constraint firstItem="TO8-r1-HBZ" firstAttribute="trailing" secondItem="mg3-m3-Z7T" secondAttribute="trailing" id="O2y-py-YqG"/>
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="trailing" secondItem="duN-Ec-HlU" secondAttribute="trailing" constant="21" id="OIb-I3-HCn"/>
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="bottom" secondItem="1Yb-mm-3Oj" secondAttribute="bottom" constant="8" id="QDe-4h-BdR"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="bottom" secondItem="mg3-m3-Z7T" secondAttribute="bottom" id="TW9-Dt-kNz"/>
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="bottom" secondItem="atZ-rc-F6R" secondAttribute="bottom" constant="15" id="U4L-VF-VO3"/>
                             <constraint firstItem="2Pe-D5-W8R" firstAttribute="centerY" secondItem="atZ-rc-F6R" secondAttribute="centerY" id="WHh-r5-o8c"/>
-                            <constraint firstItem="TO8-r1-HBZ" firstAttribute="trailing" secondItem="mg3-m3-Z7T" secondAttribute="trailing" id="a2t-Kh-LF7"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="top" secondItem="8bX-QG-tOM" secondAttribute="top" id="eJg-u0-ozP"/>
-                            <constraint firstItem="TO8-r1-HBZ" firstAttribute="leading" secondItem="mg3-m3-Z7T" secondAttribute="leading" id="osc-43-Wef"/>
                             <constraint firstItem="1Yb-mm-3Oj" firstAttribute="leading" secondItem="mg3-m3-Z7T" secondAttribute="leading" constant="8" id="pCR-zi-rf6"/>
                             <constraint firstItem="2Pe-D5-W8R" firstAttribute="centerX" secondItem="atZ-rc-F6R" secondAttribute="centerX" id="rPt-Jb-195"/>
                         </constraints>
@@ -876,8 +876,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ipm-Vy-Nu1" kind="relationship" relationship="viewControllers" id="2in-zl-0Od"/>
                         <segue destination="z4z-ze-mgb" kind="relationship" relationship="viewControllers" id="a4W-O1-YQm"/>
+                        <segue destination="ipm-Vy-Nu1" kind="relationship" relationship="viewControllers" id="2in-zl-0Od"/>
                         <segue destination="B9c-Ub-JGN" kind="relationship" relationship="viewControllers" id="4TA-ZF-5Vz"/>
                     </connections>
                 </tabBarController>

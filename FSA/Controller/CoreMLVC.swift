@@ -110,7 +110,23 @@ class CoreMLVC: UIViewController {
             } else {
                 let identification = classification.identifier
                 let confidence = Int(classification.confidence * 100)
-                self.identificationLbl.text = identification
+                
+                //change the text here
+                
+                let translator = ROGoogleTranslate()
+                translator.apiKey = "AIzaSyBzXaETa-6fM1pPVdsf2LXhkQqaKFIBYAs" // Add your API Key here
+                
+                var params = ROGoogleTranslateParams(source: "en",
+                                                     target: "es",
+                                                     text:   identification)
+                
+                translator.translate(params: params) { (result) in
+                    DispatchQueue.main.async {
+                        print(result)
+                        self.identificationLbl.text = "English: \(identification) | Spanish: \(result)"
+                    }
+                }
+                
                 self.confidenceLbl.text = "CONFIDENCE: \(confidence)%"
                 
                 //call api to transaction here
@@ -130,9 +146,10 @@ class CoreMLVC: UIViewController {
         
         //change the voice of the language
         //https://stackoverflow.com/questions/23827145/how-to-get-difference-language-code-for-ios-7-avspeechutterance-text-to-speech
-        speechUtterance.voice = AVSpeechSynthesisVoice(language: "es-MX")
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         speechSynthesizer.speak(speechUtterance)
     }
+    
     
 }
 

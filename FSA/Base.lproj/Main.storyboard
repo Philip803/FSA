@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bcf-Js-cor">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4z-ze-mgb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FSA-->
+        <!--FullStack-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="FSA" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,21 +77,41 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A: 0 B: 0 C: 0 D: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCK-WO-umc">
+                                                    <rect key="frame" x="223" y="71" width="137" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iie-9A-0J3">
+                                                    <rect key="frame" x="24" y="114" width="326" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="8SR-tp-qiD"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vCK-WO-umc" secondAttribute="bottom" constant="2" id="1Wj-3A-5NS"/>
                                                 <constraint firstItem="AgV-5z-QiG" firstAttribute="leading" secondItem="1ai-7A-iXY" secondAttribute="leadingMargin" id="1hT-u5-OEg"/>
                                                 <constraint firstItem="Hof-qC-X28" firstAttribute="top" secondItem="AgV-5z-QiG" secondAttribute="bottom" constant="5" id="5Cm-wI-vy6"/>
                                                 <constraint firstItem="Hv8-sA-rog" firstAttribute="leading" secondItem="1ai-7A-iXY" secondAttribute="leadingMargin" id="5P4-oO-bBT"/>
                                                 <constraint firstItem="Hv8-sA-rog" firstAttribute="top" secondItem="Hof-qC-X28" secondAttribute="bottom" constant="8" id="6Rl-jD-zBt"/>
+                                                <constraint firstItem="vCK-WO-umc" firstAttribute="top" secondItem="Hof-qC-X28" secondAttribute="bottom" constant="8" id="GwI-LA-MDv"/>
                                                 <constraint firstItem="gP2-DG-N3c" firstAttribute="leading" secondItem="AgV-5z-QiG" secondAttribute="trailing" constant="8" id="H53-rj-vE1"/>
                                                 <constraint firstItem="Hof-qC-X28" firstAttribute="leading" secondItem="1ai-7A-iXY" secondAttribute="leadingMargin" id="HEB-FR-IPR"/>
+                                                <constraint firstItem="vCK-WO-umc" firstAttribute="trailing" secondItem="1ai-7A-iXY" secondAttribute="trailingMargin" id="LNK-dW-hWO"/>
                                                 <constraint firstItem="AgV-5z-QiG" firstAttribute="top" secondItem="1ai-7A-iXY" secondAttribute="topMargin" id="MK5-9a-l2p"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Hof-qC-X28" secondAttribute="trailing" id="QQJ-0j-2fo"/>
+                                                <constraint firstItem="Iie-9A-0J3" firstAttribute="leading" secondItem="1ai-7A-iXY" secondAttribute="leading" constant="24" id="fOl-2X-4qZ"/>
                                                 <constraint firstItem="gP2-DG-N3c" firstAttribute="centerY" secondItem="AgV-5z-QiG" secondAttribute="centerY" id="ogJ-Cr-ihE"/>
+                                                <constraint firstAttribute="bottom" secondItem="Iie-9A-0J3" secondAttribute="bottom" constant="2" id="p3c-vn-4aC"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Hv8-sA-rog" secondAttribute="bottom" constant="2" id="un4-zQ-JPB"/>
+                                                <constraint firstAttribute="trailing" secondItem="Iie-9A-0J3" secondAttribute="trailing" constant="25" id="wfU-dG-jdn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="answerFromStudent" destination="vCK-WO-umc" id="mO8-tc-vII"/>
                                             <outlet property="likesImg" destination="WzI-vP-RlU" id="zzv-Hd-OZ0"/>
                                             <outlet property="likesNumLabel" destination="9Rv-PL-9We" id="QkS-iq-hlh"/>
                                             <outlet property="questionTxtLabel" destination="Hof-qC-X28" id="QKf-kW-f68"/>
@@ -114,7 +134,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FSA" id="dBR-6t-WJV">
+                    <navigationItem key="navigationItem" title="FullStack" id="dBR-6t-WJV">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="S3R-nF-YMP">
                             <connections>
                                 <action selector="logoutTapped:" destination="BYZ-38-t0r" id="4gr-Ub-a84"/>

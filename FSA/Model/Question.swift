@@ -19,14 +19,16 @@ class Question {
     private(set) var numLikes: Int!
     private(set) var numComments: Int!
     private(set) var documentId: String!
+    private(set) var studentAns: String!
 
-    init(username: String, timestamp : Date, questionTxt : String, numLikes: Int, numComments: Int, documentId : String) {
+    init(username: String, timestamp : Date, questionTxt : String, numLikes: Int, numComments: Int,studentAns : String , documentId : String) {
         self.username = username
         self.timestamp = timestamp
         self.questionTxt = questionTxt
         self.numLikes = numLikes
         self.numComments = numComments
         self.documentId = documentId
+        self.studentAns = studentAns
     }
     
     class func parseData(snapshot : QuerySnapshot?) -> [Question] {
@@ -40,9 +42,10 @@ class Question {
             let questionTxt = data[QUESTION_TXT] as? String ?? ""
             let numLikes = data[NUM_LIKES] as? Int ?? 0
             let numComments = data[NUM_COMMENTS] as? Int ?? 0
+            let studentAns = data["studentAns"] as? String ?? "A:0 B:0 C:0 D:0"
             let documentId = document.documentID
             
-            let newQuestion = Question(username: username, timestamp: timestamp, questionTxt: questionTxt, numLikes: numLikes, numComments: numComments, documentId: documentId)
+            let newQuestion = Question(username: username, timestamp: timestamp, questionTxt: questionTxt, numLikes: numLikes, numComments: numComments,studentAns :studentAns, documentId: documentId)
             
             questions.append(newQuestion)
         }

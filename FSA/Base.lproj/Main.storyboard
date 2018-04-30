@@ -477,18 +477,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" red="0.99589485159115754" green="1" blue="0.73918439032092198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yb-mm-3Oj" customClass="RoundedShowButton" customModule="FSA" customModuleProvider="target">
-                                <rect key="frame" x="8" y="580" width="85" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.99314998541251964" blue="0.97375795809791366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="48x-j0-F0g"/>
-                                    <constraint firstAttribute="width" constant="85" id="vHB-fE-jjJ"/>
-                                </constraints>
-                                <state key="normal" title="OFF"/>
-                                <connections>
-                                    <action selector="goBackTapped:" destination="nPq-o3-a1z" eventType="touchUpInside" id="HKq-ai-4a8"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duN-Ec-HlU" customClass="RoundedShadowView" customModule="FSA" customModuleProvider="target">
                                 <rect key="frame" x="20" y="79" width="334" height="60"/>
                                 <subviews>
@@ -539,12 +527,10 @@
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="trailing" secondItem="atZ-rc-F6R" secondAttribute="trailing" constant="15" id="NxQ-s8-Rec"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="trailing" secondItem="mg3-m3-Z7T" secondAttribute="trailing" id="O2y-py-YqG"/>
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="trailing" secondItem="duN-Ec-HlU" secondAttribute="trailing" constant="21" id="OIb-I3-HCn"/>
-                            <constraint firstItem="mg3-m3-Z7T" firstAttribute="bottom" secondItem="1Yb-mm-3Oj" secondAttribute="bottom" constant="8" id="QDe-4h-BdR"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="bottom" secondItem="mg3-m3-Z7T" secondAttribute="bottom" id="TW9-Dt-kNz"/>
                             <constraint firstItem="mg3-m3-Z7T" firstAttribute="bottom" secondItem="atZ-rc-F6R" secondAttribute="bottom" constant="15" id="U4L-VF-VO3"/>
                             <constraint firstItem="2Pe-D5-W8R" firstAttribute="centerY" secondItem="atZ-rc-F6R" secondAttribute="centerY" id="WHh-r5-o8c"/>
                             <constraint firstItem="TO8-r1-HBZ" firstAttribute="top" secondItem="8bX-QG-tOM" secondAttribute="top" id="eJg-u0-ozP"/>
-                            <constraint firstItem="1Yb-mm-3Oj" firstAttribute="leading" secondItem="mg3-m3-Z7T" secondAttribute="leading" constant="8" id="pCR-zi-rf6"/>
                             <constraint firstItem="2Pe-D5-W8R" firstAttribute="centerX" secondItem="atZ-rc-F6R" secondAttribute="centerX" id="rPt-Jb-195"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mg3-m3-Z7T"/>
@@ -553,7 +539,6 @@
                         <outlet property="cameraView" destination="TO8-r1-HBZ" id="meo-zz-8Ri"/>
                         <outlet property="captureImageView" destination="atZ-rc-F6R" id="qCu-qn-Qyc"/>
                         <outlet property="confidenceLbl" destination="44q-zu-S7h" id="hmq-Jb-N7w"/>
-                        <outlet property="flashBtn" destination="1Yb-mm-3Oj" id="Ny2-4p-Igr"/>
                         <outlet property="identificationLbl" destination="5gc-FE-pmx" id="7Sb-qO-w6b"/>
                         <outlet property="roundedLblView" destination="duN-Ec-HlU" id="1xg-FG-1ve"/>
                         <outlet property="spinner" destination="2Pe-D5-W8R" id="wPr-uq-KVj"/>

@@ -114,7 +114,7 @@ class CoreMLVC: UIViewController {
                 //change the text here
                 
                 let translator = ROGoogleTranslate()
-                translator.apiKey = "AIzaSyBzXaETa-6fM1pPVdsf2LXhkQqaKFIBYAs" // Add your API Key here
+                translator.apiKey = "YOUR GOOGLE API KEY" // Add your API Key here
                 
                 var params = ROGoogleTranslateParams(source: "en",
                                                      target: "es",

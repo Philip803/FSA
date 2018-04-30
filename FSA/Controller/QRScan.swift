@@ -91,7 +91,8 @@ class QRScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             found(code: stringValue)
         }
         
-        dismiss(animated: true)
+        _ = navigationController?.popViewController(animated: true)
+//        dismiss(animated: true)
     }
     
     //if successful got the right code

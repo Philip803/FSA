@@ -70,11 +70,13 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.5.0)
+  - ROGoogleTranslate (0.0.5)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - ROGoogleTranslate
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -94,6 +96,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - ROGoogleTranslate
 
 SPEC CHECKSUMS:
   BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
@@ -112,7 +115,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  ROGoogleTranslate: 344d579487c21af1ae54138baa68605b861ba84e
 
-PODFILE CHECKSUM: b7c451e7e0377ac0e15b2f7c0d7567617b934b14
+PODFILE CHECKSUM: c7d35088aada10c99029ce6fc7c8fbaff2162e16
 
 COCOAPODS: 1.5.0

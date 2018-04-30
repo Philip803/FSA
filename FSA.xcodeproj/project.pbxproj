@@ -34,6 +34,8 @@
 		D48A6B7A20917C55003CC091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48A6B7820917C55003CC091 /* LaunchScreen.storyboard */; };
 		D48A6B8520917C55003CC091 /* FSATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B8420917C55003CC091 /* FSATests.swift */; };
 		D48A6B9020917C55003CC091 /* FSAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A6B8F20917C55003CC091 /* FSAUITests.swift */; };
+		D48D8A19209691CD00A14973 /* ROGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D8A18209691CD00A14973 /* ROGoogleTranslate.swift */; };
+		D48D8A1B209692B900A14973 /* BeforeCoreMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48D8A1A209692B900A14973 /* BeforeCoreMLVC.swift */; };
 		E6C0D2C332102A658F0075DF /* Pods_FSA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF315EA28C4D9C2F5339AB21 /* Pods_FSA.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		D48A6B8B20917C55003CC091 /* FSAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A6B8F20917C55003CC091 /* FSAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSAUITests.swift; sourceTree = "<group>"; };
 		D48A6B9120917C55003CC091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48D8A18209691CD00A14973 /* ROGoogleTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROGoogleTranslate.swift; sourceTree = "<group>"; };
+		D48D8A1A209692B900A14973 /* BeforeCoreMLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeCoreMLVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 				D40EA5882095312C009976A1 /* QRScan.swift */,
 				D40EA58A209538DF009976A1 /* QRcodeVC.swift */,
 				D40EA5902095FB04009976A1 /* CoreMLVC.swift */,
+				D48D8A1A209692B900A14973 /* BeforeCoreMLVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				242E04672092C7A60036DBE6 /* Constants.swift */,
+				D48D8A18209691CD00A14973 /* ROGoogleTranslate.swift */,
 			);
 			path = Utilitues;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ROGoogleTranslate/ROGoogleTranslate.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -415,6 +422,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ROGoogleTranslate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -490,7 +498,9 @@
 			files = (
 				242E046A2092DC000036DBE6 /* Question.swift in Sources */,
 				D40EA59920965971009976A1 /* SqueezeNet.mlmodel in Sources */,
+				D48D8A1B209692B900A14973 /* BeforeCoreMLVC.swift in Sources */,
 				242E047020949F980036DBE6 /* CreateUserVC.swift in Sources */,
+				D48D8A19209691CD00A14973 /* ROGoogleTranslate.swift in Sources */,
 				D40EA58B209538DF009976A1 /* QRcodeVC.swift in Sources */,
 				D48A6B7220917C51003CC091 /* MainVC.swift in Sources */,
 				D40EA59720963A2F009976A1 /* RoundedShadowImageView.swift in Sources */,

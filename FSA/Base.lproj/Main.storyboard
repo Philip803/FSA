@@ -314,10 +314,10 @@
             </objects>
             <point key="canvasLocation" x="-1005.6" y="740.7796101949026"/>
         </scene>
-        <!--View Controller-->
+        <!--Before CoreMLVC-->
         <scene sceneID="9No-gD-oXg">
             <objects>
-                <viewController id="zko-R2-FCa" sceneMemberID="viewController">
+                <viewController id="zko-R2-FCa" customClass="BeforeCoreMLVC" customModule="FSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KSZ-R9-RdB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +330,14 @@
                                     <segue destination="nPq-o3-a1z" kind="show" id="sZm-29-WTc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-sY-ovd">
+                                <rect key="frame" x="164" y="469" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="translateTapped:" destination="zko-R2-FCa" eventType="touchUpInside" id="ARy-hM-e9Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1Jk-z8-vyn"/>
@@ -337,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG8-vz-nHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1940" y="1612"/>
+            <point key="canvasLocation" x="-1236" y="1529"/>
         </scene>
         <!--CoreMLVC-->
         <scene sceneID="R5u-67-puY">
@@ -435,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FsF-JW-hB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1018.4" y="1599.8500749625189"/>
+            <point key="canvasLocation" x="-510" y="1529"/>
         </scene>
         <!--Scan-->
         <scene sceneID="4DS-Sy-cik">

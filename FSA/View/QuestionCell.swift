@@ -16,7 +16,9 @@ class QuestionCell: UITableViewCell {
     @IBOutlet weak var questionTxtLabel: UILabel!
     @IBOutlet weak var likesImg: UIImageView!
     @IBOutlet weak var likesNumLabel: UILabel!
-//    @IBOutlet weak var commentsNumLbl: UILabel!
+    @IBOutlet weak var answerFromStudent: UILabel!
+    
+    //    @IBOutlet weak var commentsNumLbl: UILabel!
     //Variable
     private var question: Question!
     
@@ -45,7 +47,8 @@ class QuestionCell: UITableViewCell {
         usernameLabel.text = question.username
         questionTxtLabel.text = question.questionTxt
         likesNumLabel.text = String(question.numLikes)
-        
+        answerFromStudent.text = String(question.studentAns)
+
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, hh:mm"
         let timestamp = formatter.string(from: question.timestamp)

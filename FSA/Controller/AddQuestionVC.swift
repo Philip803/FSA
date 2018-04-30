@@ -26,7 +26,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
         questionTxt.layer.cornerRadius = 4
         questionTxt.text = "My Random question..."
         questionTxt.delegate = self
-        userNameTxt.text = "Anonymous"
+        userNameTxt.text = "Omri"
     }
 
     //call when user begin typing
@@ -44,6 +44,7 @@ class AddQuestionVC: UIViewController , UITextViewDelegate{
             NUM_COMMENTS : 0,
             QUESTION_TXT : questionTxt.text,
             TIMESTAMP : FieldValue.serverTimestamp(),
+            "studentAns" : "A:0 B:0 C:0 D:0",
             USERNAME : username
         ]) { (err) in
             if let err = err {

@@ -263,7 +263,7 @@
             </objects>
             <point key="canvasLocation" x="-1958" y="620"/>
         </scene>
-        <!--RcodeVC-->
+        <!--CHECK-IN-->
         <scene sceneID="yVU-Qt-ket">
             <objects>
                 <viewController id="Bcf-Js-cor" customClass="QRcodeVC" customModule="FSA" customModuleProvider="target" sceneMemberID="viewController">
@@ -413,7 +413,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="axq-tY-j8d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="l3Y-zf-LJ2"/>
+                    <navigationItem key="navigationItem" title="CHECK-IN" id="l3Y-zf-LJ2"/>
                     <connections>
                         <outlet property="checkInStatusTxt" destination="aeO-wk-9R7" id="g9q-Kn-V9m"/>
                         <outlet property="checkInTime" destination="OgW-3g-XBl" id="LLG-is-lEr"/>
@@ -423,7 +423,7 @@
             </objects>
             <point key="canvasLocation" x="-1005.6" y="740.7796101949026"/>
         </scene>
-        <!--Before CoreMLVC-->
+        <!--<br>-->
         <scene sceneID="9No-gD-oXg">
             <objects>
                 <viewController id="zko-R2-FCa" customClass="BeforeCoreMLVC" customModule="FSA" customModuleProvider="target" sceneMemberID="viewController">
@@ -457,7 +457,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Jk-z8-vyn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wkQ-c3-W6L"/>
+                    <navigationItem key="navigationItem" title="&lt;br&gt;" id="wkQ-c3-W6L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HG8-vz-nHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

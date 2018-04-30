@@ -199,13 +199,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D40EA59A209659DF009976A1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		D48A6B6320917C51003CC091 = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				D40EA59820965971009976A1 /* SqueezeNet.mlmodel */,
-				D40EA59A209659DF009976A1 /* Resources */,
 				242E04662092C7920036DBE6 /* Utilitues */,
 				242E04622092B4A80036DBE6 /* View */,
 				242E04612092B4A10036DBE6 /* Controller */,
